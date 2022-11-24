@@ -1,5 +1,10 @@
 Algorithm:
 
+A median is to Divide array into two equal parts.
+we take a example in 4.png.
+if we find midA and midB that make midA+midB=(nums1.length+nums2.length)/(Up and down 1)  and nums1[midA-1]<=nums2[midB]&&nums2[midB-1]<=nums1[midA]  ,the median of the two sorted arrays must come fron nums1[midA-1],nums1[midA],nums2[midB],nums2[midB].
+
+First we need to do is to find midA and midB.
 Here idea is to compare medians of both sorted arrays and recursively reduce search space by half. Suppose median of the first array is m1, and second array is m2. We can get this value in O(1) using the formula: m1 = A[n/2], m2 = B[n/2](We have assumed that n is odd)
 Case 1 if (m1 == m2): In this case, n - 1 elements are less than m1 and n - 1 elements are greater than m2. In other words, both m1 and m2 would be middle elements in the merged array i.e. element at (n - 1)th and nth index. We take average of both, which is equal to m1 or m2. We return any one of theses values as an output.
 
