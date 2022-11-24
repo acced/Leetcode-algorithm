@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-public class Solution1 {
+public class Solution {
     public int[] TwoSum(int[] nums, int target) 
     {        
         Dictionary<int, int> tempdir = new Dictionary<int, int>();    
