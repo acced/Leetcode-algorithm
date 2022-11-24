@@ -26,19 +26,19 @@ public class Solution
                 iMax = i - 1;
             }
             else
-            { // 达到要求，并且将边界条件列出来单独考虑
+            { // We've found MinA, let's find MedianS next
                 int maxLeft = 0;
                 if (i == 0) { maxLeft = nums2[j - 1]; }
                 else if (j == 0) { maxLeft = nums1[i - 1]; }
                 else if (j != 0){ maxLeft = Math.Max(nums1[i - 1], nums2[j - 1]); }
-                if ((m + n) % 2 == 1) { return maxLeft; } // 奇数的话不需要考虑右半部分
+                if ((m + n) % 2 == 1) { return maxLeft; } // If there is an odd number, the right half does not need to be considered
 
                 int minRight = 0;
                 if (i == m) { minRight = nums2[j]; }
                 else if (j == n) { minRight = nums1[i]; }
                 else { minRight = Math.Min(nums2[j], nums1[i]); }
 
-                return (maxLeft + minRight) / 2.0; //如果是偶数的话返回结果
+                return (maxLeft + minRight) / 2.0; //If there is an even number
             }
 
         }
