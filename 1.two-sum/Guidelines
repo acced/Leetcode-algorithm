@@ -1,7 +1,0 @@
-Use Hash
-what is Hash?
-A hash function is any function that can be used to map data of arbitrary size to fixed-size values. 
-Using A Dictionary as array's hash bulid the relationship between array.value and target.
-Dictionary key:array[j] Dictionary value:j
-Judging target-array[i] and array[i].Find return i,j
-
