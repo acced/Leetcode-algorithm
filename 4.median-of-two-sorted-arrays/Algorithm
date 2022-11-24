@@ -1,0 +1,16 @@
+Algorithm:
+
+Use A hash table
+what is Hash table?
+In computing, a hash table, also known as hash map, is a data structure that implements an associative array or dictionary. It is an abstract data type that maps keys to values.
+Using A Dictionary as array's hash table bulid the relationship between array.value and target.
+Dictionary key:array[j] Dictionary value:j
+Judging target-array[i] and array[i].Find return i,j
+
+
+Complexity Analysis
+
+Time complexity: O(n). We traverse the list containing n elements only once. Each lookup in the table costs only O(1) time.
+
+Space complexity: O(n). The extra space required depends on the number of items stored in the hash table, which stores at most nnn elements.
+
