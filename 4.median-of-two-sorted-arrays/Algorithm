@@ -2,40 +2,29 @@ Algorithm:
 
 A median is to Divide array into two equal parts.
 we take a example in 4.png.
-if we find midA and midB that make midA+midB=(nums1.length+nums2.length)/(Up and down 1)  and nums1[midA-1]<=nums2[midB]&&nums2[midB-1]<=nums1[midA]  ,the median of the two sorted arrays must come fron nums1[midA-1],nums1[midA],nums2[midB],nums2[midB].
+Here idea is to find midA and midB that make midA + midB = (nums1.length+nums2.length)/2 (Up and down 1)  and nums1[midA-1] <= nums2[midB] && nums2[midB-1] <= nums1[midA]  ,the median of the two sorted arrays must come fron nums1[midA-1] or nums1[midA] or nums2[midB] or nums2[midB].(We have assumed that nums1 is less than nums2)
 
-First we need to do is to find midA and midB.
-Here idea is to compare medians of both sorted arrays and recursively reduce search space by half. Suppose median of the first array is m1, and second array is m2. We can get this value in O(1) using the formula: m1 = A[n/2], m2 = B[n/2](We have assumed that n is odd)
-Case 1 if (m1 == m2): In this case, n - 1 elements are less than m1 and n - 1 elements are greater than m2. In other words, both m1 and m2 would be middle elements in the merged array i.e. element at (n - 1)th and nth index. We take average of both, which is equal to m1 or m2. We return any one of theses values as an output.
+Next we explain why.
 
-Case 2 if (m1 < m2): In the merged array, both middle elements of median will lie between the range [m1, m2] i.e. m1 <= (middle1, middle2) <= m2.
+First,we call the median of the two sorted arrays FinalMedian.FinalMedian divide the array merged by two sorted arrays nums1 and nums2 into two equal parts LeftFinal and RightFinal.
+Here we need to be sure that number of LeftFinal equal RightFinal (Up and down 1) and Maxvalue of LeftFinal less than Minvalue of RightFinal.
+So,num1[0~(midA-1)] + num2[0~(midB-1)] forms LeftFinal and num1[midA~] + num2[midB~] forms RightFinal.Due to sorted array,Maxvalue of LeftFinal is nums1[midA-1] or num2[midB],Minvalue of RightFinal is num1[midA] or num2[midB].We know num1[midA-1] less than num1[midA] and num2[midB-1] less than num2[midB],we need to do is to compare nums1[midA-1] <= nums2[midB] && nums2[midB-1] <= nums1[midA].
 
-We can ignore the right half of array B[]: All values greater than m2 will always be the ending elements in merged array (n/2 values if n is odd) i.e.
-somewhere present in the range of index from n + 1 to 2n - 1 in the merged array (Think!). In other words, these values will never be middle values in merged array. So, we ignore the right half of array B[] from index n/2 + 1 to n - 1.
-In other words, both middle values of the median will be present in one of these two subarrays: right half of array A[] and left half of array B[].
+Next,we have to determine which value to choose as median. Suppose length of the first array is m, and second array is n. i.e.
+
+Case m + n is odd：midA + midB = (nums1.length+nums2.length)/2.LeftFinal has a more element than RightFinal. FinalMedian is Maxvalue of nums1[midA-1] and num2[midB-1].
 
 
-Case 3 if (m1 > m2): In the merged array, both middle elements of the median will lie between the range [m2, m1] i.e. m2 <= (middle1, middle2) <= m1.
+Case m + n is even:FinalMedian is (Maxvalue of LeftFinal + Minvalue of RightFinal)/2.
 
-We can ignore the left half of array A[]: All values less than m1 will always
-be the starting elements in merged array (n/2 values if n is odd) i.e.
-somewhere present in the range of index from 0 to n - 2 in merged array
-(Think!). In other words, these values will never be middle values in merged
-array. So, we ignore the left half of array A[] from index 0 to n/2 - 1.
+Special case:midA or midB =0. judge for yourself.
 
-We can ignore the right half of array A[]: All values greater than m1 will always be the ending elements in merged array (n/2 values if n is odd) i.e.
-somewhere present in the range of index from n + 1 to 2n - 1 in the merged array. In other words, these values will never be middle values in merged array. So, we ignore the right half of array A[] from index n/2 + 1 to n - 1.
-We can ignore the left half of array B[]: All values less than m2 will always be the starting elements in merged sorted array (n/2 values if n is odd) i.e.
-somewhere present in the range of index from 0 to n - 2 in merged array. In other words, these values will never be middle values in merged array. So, we ignore the left half of array B[] from index 0 to n/2 - 1.
-In other words, both middle values of the median will be present in one of these two subarrays: left half of array A[] and right half of array B[].
-
-The above idea is quite similar to binary search: We reject half elements in both sorted arrays after each comparison. Overall, we are reducing search space by half after each step. So, we can think of implementing a solution using idea similar to recursive binary search.
 
 
 
 Complexity Analysis
 
-Time complexity: O(n). We traverse the list containing n elements only once. Each lookup in the table costs only O(1) time.
+Time complexity: O(log(n)).  We did a binary search on the shorter array.Binary search  costs  O(log(min(nums1，nums2))) time.
 
-Space complexity: O(n). The extra space required depends on the number of items stored in the hash table, which stores at most nnn elements.
+Space complexity: O(1). Just find some elements.
 
