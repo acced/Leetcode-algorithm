@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-public class Solution4
+public class Solution
 {
     public double FindMedianSortedArrays(int[] nums1, int[] nums2)
     {
@@ -18,11 +18,11 @@ public class Solution4
             int i = (iMin + iMax) / 2;
             int j = (m + n + 1) / 2 - i;
             if (j != 0 && i != m && nums2[j - 1] > nums1[i])
-            { // i 需要增大
+            { 
                 iMin = i + 1;
             }
             else if (i != 0 && j != n && nums1[i - 1] > nums2[j])
-            { // i 需要减小
+            { 
                 iMax = i - 1;
             }
             else
