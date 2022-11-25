@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-public class Solution11 {
+public class Solution {
     public int MaxArea(int[] height) {
         int start=0,end=height.Length-1,max=0;
         while(start<end){
