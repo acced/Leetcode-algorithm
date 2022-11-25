@@ -3,7 +3,7 @@ Algorithm:
 Use A hash table
 what is Hash table?
 In computing, a hash table, also known as hash map, is a data structure that implements an associative array or dictionary. It is an abstract data type that maps keys to values.
-Using A Dictionary as array's hash table bulid the relationship between array.value and target.
+Using A Dictionary as array's hash table bulid the relationship between array.value and array.key.
 Dictionary key:array[j] Dictionary value:j
 Judging target-array[i] and array[i].Find return i,j
 
