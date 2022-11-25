@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-public class Solution27 {
+public class Solution26 {
     public int RemoveDuplicates(int[] nums) {
   /*      int lo=1,li=nums.Length;
         int temp=nums[0];
