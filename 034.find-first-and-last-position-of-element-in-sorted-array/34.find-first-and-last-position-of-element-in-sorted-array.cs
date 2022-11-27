@@ -64,7 +64,7 @@ public class Solution {
             mid=low+((high-low)>>1);
             if (nums[mid]>=target)
         {
-            if(mid==nums.Length-1||nums[mid-1] < target) return mid;
+            if(mid==0||nums[mid-1] < target) return mid;
             high=mid-1;
         }
         else 
@@ -83,7 +83,7 @@ public class Solution {
             mid=low+((high-low)>>1);
             if (nums[mid]<=target)
         {
-            if(mid==0||nums[mid+1] > target) return mid;
+            if(mid==nums.Length-1||nums[mid+1] > target) return mid;
             low = mid + 1;
         }
         else 
