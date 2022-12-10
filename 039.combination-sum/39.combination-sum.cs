@@ -8,7 +8,7 @@
 public class Solution {
     public IList<IList<int>> CombinationSum(int[] candidates, int target) {
             List<IList<int>> solutions = new List<IList<int>>();
-
+           
             // List of numbers for the current solution being searched
             List<int> current = new List<int>();
 
