@@ -25,9 +25,13 @@ In each step of the search, we need to make sure that we don't use the same elem
 The above function takes the following arguments:
 
 'candidates': the input array of distinct integers.
+
 'target': the target integer.
+
 'result': a list to store the unique combinations that sum up to target.
+
 'combination': a list to store the current combination of numbers.
+
 'start': the index of the element in candidates that we are currently considering.
 
 The function first checks if the current target is zero. If it is, it means that we have found a combination that sums up to target, and we can add it to the result. Otherwise, if the target is negative, it means that we have reached an invalid state and we should stop the search.
