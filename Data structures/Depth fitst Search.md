@@ -1,23 +1,22 @@
 Applications of DFS：
-Finding connected components in a graph.
-Topological sorting in a DAG(Directed Acyclic Graph).
-Finding 2/3–(edge or vertex)–connected components.
-Finding the bridges of a graph.
-Finding strongly connected components.
-Solving puzzles with only one solution, such as mazes.
-Finding biconnectivity in graphs and many more…
+*Finding connected components in a graph.
+*Topological sorting in a DAG(Directed Acyclic Graph).
+*Finding 2/3–(edge or vertex)–connected components.
+*Finding the bridges of a graph.
+*Finding strongly connected components.
+*Solving puzzles with only one solution, such as mazes.
+*Finding biconnectivity in graphs and many more…
 
-
-
-Code：
+``` C
 procedure dfs(vertex v)
 {
+
     visit(v);
     for each neighbor u of v
         if u is undiscovered
             call dfs(u);
-}
 
+}
 
 Depth–first search (DFS) is an algorithm for traversing or searching 
 tree or graph data structures. 
