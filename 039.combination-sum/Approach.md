@@ -1,3 +1,5 @@
+# problem
+
 The problem is called "Combination Sum", and it is a classic problem in computer science. 
 
 The problem is defined as follows:
@@ -15,6 +17,8 @@ The possible unique combinations are:
 
 [2, 2, 3]
 [7]
+
+# solution
 
 The goal of this problem is to find all the unique combinations of elements in candidates that sum up to the given target. Note that the numbers in candidates can only be used once in each combination, and that the combinations should be unique.
 
@@ -38,7 +42,7 @@ The function first checks if the current target is zero. If it is, it means that
 
 If the target is neither zero nor negative, we iterate over the remaining elements in candidates, starting from the start index. For each element, we add it to the current combination, and call the helper function recursively with the updated target and combination. After the recursive call returns, we remove the last element from the combination to restore the state before the recursive call.
 
-complexity：
+# complexity：
 
 In the program that I provided above, the time complexity and space complexity are both O(n), where n is the length of the candidates array. This is because the program uses a recursive algorithm, and the depth of the recursion is determined by the length of the candidates array. In the worst case, the recursion depth can reach the length of the candidates array, which means that the time and space complexity are both proportional to the length of the candidates array.
 
