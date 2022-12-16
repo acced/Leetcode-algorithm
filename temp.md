@@ -1,35 +1,35 @@
-The problem is called "Combination Sum", and it is a classic problem in computer science. 
+下面是所有prompts的基础后面所有的描述都要加在它的后面，记住括号里面的内容是强调B它的重要性，括号越多重要性越大。
+以下是一些prompts的例子
+1.
+((masterpiecel), ((best qulty)), ((ultra detailed)), (illustration)), (disheveled hair)), ((nsfw)), straight hair, sexy, naughty blush face, bad woman, cool face, long black hair, 
+2.
+((masterpiece)), ((best qulty)), (ultra detailed) (illustration)) (disheveled hair), 
+((masterpiece)), ((best qulty)), (ultra detailed) (illustration)) (disheveled hair), right arm with bandage, loli , (dark skinned girl), black hair, black eyes, elf ears, messy_ hair, ponytail, dirty , (torn clothes), 
+3.
+messy_ hair, ponytail, dirty , (torn clothes), messy_ hair, ponytail, dirty , (torn clothes), es)), collar, green eyes, mid age, 1 girl, solo, collarbone, cloak, wind, coat, robe, coat, leather jacket, combat suit.cinematic angle, glaive, 
+以上面为例，帮我写一段prompts描述 个红色头发茶色眼睛的少女， 身材娇小可人，长着精灵的尖耳朵，穿身黑白色调的女仆装与白a色丝袜，性格热情而开朗。补充的描述中不能加括号!
 
-The problem is defined as follows:
+仿照例子，并不局限于我给你的单词，给出一套详细描述“穿着白色丝袜和黑色皮衣的萝莉魅魔”的prompt，直接开
+始给出prompt, 不需要用自然语言描述。开头必须加上masterpiece, (bestquality), highly detailed, ultra-detailed
 
-Given an array of distinct integers candidates and a target integer target, find all unique combinations in candidates 
-where the candidate numbers sum to target. 
-Each number in candidates may only be used once in the combination.
-
-For example, given the following candidates and target:
-
-candidates = [2, 3, 6, 7]
-target = 7
-
-The possible unique combinations are:
-
-[2, 2, 3]
-[7]
-
-The goal of this problem is to find all the unique combinations of elements in candidates that sum up to the given target. Note that the numbers in candidates can only be used once in each combination, and that the combinations should be unique.
-
-To solve this problem, we can use a recursive algorithm. The basic idea is to start with the first element in candidates, and try to find a combination of numbers that sum up to target by adding this element and other elements in candidates. If we find such a combination, we add it to the result and continue the search. If we cannot find a combination that sums up to target, we stop the search and return.
-
-In each step of the search, we need to make sure that we don't use the same element more than once in the same combination, and that we only add unique combinations to the result. To achieve this, we can sort the input candidates array, and use a helper function to keep track of the current combination and the elements that have already been used. The helper function can be defined as follows:
-
-The above function takes the following arguments:
-
-'candidates': the input array of distinct integers.
-'target': the target integer.
-'result': a list to store the unique combinations that sum up to target.
-'combination': a list to store the current combination of numbers.
-'start': the index of the element in candidates that we are currently considering.
-
-The function first checks if the current target is zero. If it is, it means that we have found a combination that sums up to target, and we can add it to the result. Otherwise, if the target is negative, it means that we have reached an invalid state and we should stop the search.
-
-If the target is neither zero nor negative, we iterate over the remaining elements in candidates, starting from the start index. For each element, we add it to the current combination, and call the helper function recursively with the updated target and combination. After the recursive call returns, we remove the last element from the combination to restore the state before the recursive call.
+下面是所有prompts的基础后面所有的描述都要加在它的后面，记住括号里面的内容是强调
+它的重要性，括号越多重要性越大。
+((masterpiece), (best qultl)), (ultra detailed) (illustration)) (disheveled hair)
+以下是一些prompts的例子
+1.
+((masterpiece)), ((best quality)), ((ultra detailed), (illustration)), ((disheveled hair), 
+((nsfw)), straight hair, sexy, naughty blush face, bad woman, cool face, long black hair, 
+black eyes, (green robe), mature body, 
+2.
+((masterpiecel), ((best qulty)), (ultra detailed)), (illustratin)), (disheveled hair), 
+nsfw, Cthulhu, remnant girl only with left arm, ((broken arm)), missing right arm, 
+right arm with bandage, loli ，(dark skinned gir), black hair, black eyes, elf ears, 
+messy_ hair, ponytail, dirty , (torn clothes), 
+3.
+((masterpe), (bestqulit), .(ultra detaild), (ilstratot), (regular bangsl), 
+(Rosmontis), (white long hair), long tail , slience, indifference, hair over eyes, ((cat
+esasy)), collar, green eyes, mid age, 1 girl, solo, collarbone, cloak, wind
+coat, robe, coat, leather jacket, combat suit.cinematic angle, glaive, 
+以上面为例，帮我写一段prompts描述 个红色头发 茶色眼睛的少女，身材娇小可人，长着
+精灵的尖耳朵，穿身黑白色调的女仆装 与白色丝袜，性格热情而开朗。补充的描述中不能
+加括号!
