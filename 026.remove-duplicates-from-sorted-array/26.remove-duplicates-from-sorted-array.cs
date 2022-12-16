@@ -24,3 +24,4 @@ public class Solution
         // Return lo + 1 as the new length of the array
         return lo + 1;
     }
+}
