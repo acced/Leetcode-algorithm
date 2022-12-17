@@ -6,35 +6,40 @@
 
 // @lc code=start
 public class Solution {
+    // This function uses binary search to find the target value in a rotated sorted array
     public int Search(int[] nums, int target) {
-           int start = 0;
+           // Initialize start and end indices of the array
+        int start = 0;
         int end = nums.Length - 1;
  
+        // Keep searching until the start index is greater than the end index
         while (start <= end) {
- 
-            // (start ... middle ... end)
+            // Calculate the middle index of the array
             int mid = (start + end) / 2;
  
+            // If the middle value is equal to the target, return the index
             if (nums[mid] == target) {
                 return mid;
             }
  
-            // 前半段数组是有序的
+            // If the first half of the array is sorted in ascending order
             if (nums[start] < nums[mid]) {
-                // target在前半段数组中
+                // If the target value is within the range of the first half of the array, search only that half of the array
                 if (target < nums[mid] && target >= nums[start]) {
-                    // 将原数组折半，取出前半段数组
+                    // Set the end index to the index before the middle index
                     end = mid - 1;
                 } else {
-                    // target在后半段数组中
+                    // If the target value is not within the range of the first half of the array, search the second half of the array
                     start = mid + 1;
                 }
             }
  
-            // 后半段数组是有序的
+            // If the second half of the array is sorted in ascending order
             else if (nums[mid] < nums[end]) {
-                // target在后半段数组中
+                // If the target value is within the range of the second half of the array, search only that half of the array
                 if (target > nums[mid] && target <= nums[end]) {
+                   
+
                     // 将原数组折半，取出后半段数组
                     start = mid + 1;
                 } else {

@@ -3,3 +3,6 @@
 /lee.csproj
 /obj
 /Program.cs
+/.gitignore
+/temp.md
+/001.two-sum
