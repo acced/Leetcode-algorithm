@@ -2,21 +2,12 @@
 
 The problem is to remove duplicate elements from a sorted array, and return the length of the array after removing duplicates.
 
-# Difficulties
-
-There are a few difficulties in solving this problem:
-* The array must be sorted in order to identify duplicates.
-* It is not enough to simply remove the duplicates, we must also return the length of the array after removing the duplicates.
-* We must not create a new array, but instead modify the input array in-place.
 # Detailed Algorithm
-1. Sort the input array in ascending order.
-2. Initialize two pointers `lo` and `li`, pointing to the first element of the array.
-3. Loop until `li` reaches the end of the array.
-4. Compare the elements at `lo` and `li`:
-    - If they are different, increment `lo` and set the element at `lo` to the element at `li`.
-    - If they are the same, do nothing.
-5. Increment `li` and repeat step 4.
-6. Return `lo + 1` as the length of the array after removing duplicates.
+It does this by using two pointers, "lo" and "li", to iterate through the array. The "lo" pointer is used to track the position of the last unique element in the array, while the "li" pointer is used to iterate through the rest of the array.
+
+The code first initializes the "lo" and "li" pointers to 0. It then enters a loop that continues until "li" reaches the end of the array. Inside the loop, if the elements pointed to by "lo" and "li" are different, the code moves "lo" forward by one and sets the element at that position to be equal to the element at "li". This effectively removes the duplicate element. The "li" pointer is then incremented by one, and the loop continues.
+
+Once the loop finishes, the code returns "lo + 1" as the new length of the array. This is because "lo" is the index of the last unique element in the array, and adding 1 to it gives the total number of unique elements in the array.
 # Time and Space Complexity
 
 The time complexity of this algorithm is O(n), where n is the length of the array. This is because we loop through the array once and only perform constant time operations at each step.
