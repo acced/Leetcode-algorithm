@@ -1,8 +1,13 @@
 ##Double pointers
+
+
 Double pointers are a common algorithm design technique that can be used to quickly locate specific elements or calculate the number of elements that meet certain conditions in arrays or linked lists and other data structures.
 
 In a double pointer approach, two pointers are used to point to specific elements in the sequence of data to be processed. By continuously moving these two pointers, the specified target can be achieved. This technique is often used to solve problems involving searching or counting elements in a sequence of data.
+
+
 ##Example
+
 For example, suppose we have an array of integers and we want to find the number of pairs of elements in the array that have a sum equal to a given target value. We could use a double pointer approach to solve this problem by using two pointers to iterate through the array and check for pairs of elements that have the desired sum. Here is an example of how this could be implemented in C#:
 ```c#
 // Function that takes an array of integers and a target value and returns the number of pairs of elements in the array that have a sum equal to the target
